@@ -338,18 +338,23 @@
             </ul>
         </div>
 
-        <div class="product__item__text">
-            <h6>@item.Title    </h6>
-            <h5>@item.Price</h5>
-            <h5>@item.StockCount</h5>
-            <h5>@item.Authors</h5>
-            <h5>@item.Description</h5>
+        @foreach (var malzeme in ViewBag.malzemes)
+            <div class="product__item__text">
+                <h6>@item.Title    </h6>
+                <h5>@item.Price</h5>
+                <h5>@item.StockCount</h5>
+                <h5>@item.Description</h5>
 
-            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
 
-        </div>
+                <td align="center">
+                    <a asp-controller="Cart" asp-action="buy" asp-route-id="@malzeme.id">Buy Now</a>
+                </td>
+
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+            </div>
     </div>
 </span>
 

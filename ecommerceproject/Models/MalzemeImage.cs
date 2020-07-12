@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ecommerceproject.Models
 {
@@ -12,5 +9,10 @@ namespace ecommerceproject.Models
         public string FileName { get; set; }
         public bool IsDefaultImage { get; set; }
         public virtual Malzeme Malzeme { get; set; }
+
+        internal dynamic findAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

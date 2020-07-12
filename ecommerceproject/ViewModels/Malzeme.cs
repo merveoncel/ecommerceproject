@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ecommerceproject.Models
 {
@@ -17,9 +13,7 @@ namespace ecommerceproject.Models
         [Required]
         [Display(Name = "Kitap Adı")]
         public string Title { get; set; } // nvarchar(512), not nullable
-        public int? PageCount { get; set; }
 
-        public string Authors { get; set; }
         public string Description { get; set; }
 
         public Decimal Price { get; set; }

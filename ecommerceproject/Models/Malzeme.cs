@@ -1,14 +1,13 @@
-﻿using System;
+﻿using ecommerceproject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ecommerceproject.Models
 {
     public class Malzeme
     {
+        internal int MalzemeId;
 
         public int Id { get; set; }
 
@@ -16,9 +15,8 @@ namespace ecommerceproject.Models
         [Required]
         [Display(Name = "Ürün Adı")]
         public string Title { get; set; } // nvarchar(512), not nullable
-        public int? PageCount { get; set; }
 
-        public string Authors { get; set; }
+
         public string Description { get; set; }
 
         public Decimal Price { get; set; }
@@ -35,6 +33,11 @@ namespace ecommerceproject.Models
         {
             CreatedDate = DateTime.Now;
             //  double result = 4.0 / 2.0; //2.0000000000000000000000001 1.9999999999999999999999998
+        }
+
+        internal Malzeme find(string id)
+        {
+            throw new NotImplementedException();
         }
 
         public virtual List<MalzemeImage> MalzemeImages { get; set; }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using ecommerceproject.Data;
 using ecommerceproject.Models;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Formatters;
 using System.IO;
 using ecommerceproject.ViewModels;
 
@@ -39,7 +37,7 @@ namespace ecommerceproject.Controllers
 
             //string directory= @"C:\Users\Huseyin\source\repos\CetBookStore\CetBookStore\wwwroot\UserImages\";
             string directory = Path.Combine(hostEnvironment.WebRootPath, "UserImages");
-            string fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(ImageUploadViewModel.ImageFile.FileName);
+            string fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(uploadModel.ImageFile.FileName);
             string fullPath = Path.Combine(directory, fileName);
 
             using (var fileStream = new FileStream(fullPath, FileMode.Create))
@@ -73,6 +71,8 @@ namespace ecommerceproject.Controllers
             {
                 return NotFound();
             }
+            MalzemeImage productModel = new MalzemeImage();
+            ViewBag.malzemes = productModel.findAll();
             return View(malzeme);
         }
 

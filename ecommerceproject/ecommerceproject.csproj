@@ -28,6 +28,10 @@
     <Folder Include="wwwroot\UserImages\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
 
 
 </Project>
