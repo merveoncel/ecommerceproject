@@ -4,7 +4,7 @@
     ViewData["Title"] = "Malzemes";
 }
 
-<h1>Shop</h1>
+<h1>Shopping</h1>
 
 
 @*<body>
@@ -324,39 +324,36 @@
 
     @foreach (var item in Model)
     {
-<span>
-    @{
-        var imageUrl = item.MalzemeImages?.FirstOrDefault()?.FileName ?? "noimage.jpg";
-    }
-    <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="product__item">
-            <div class="product__item__pic set-bg"><img src="~/UserImages/@imageUrl" /></div>
-            <ul class="product__item__pic__hover">
-                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
-        </div>
+        <span>
+            @{
+                var imageUrl = item.MalzemeImages?.FirstOrDefault()?.FileName ?? "noimage.jpg";
+            }
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg"><img src="~/UserImages/@imageUrl" /></div>
 
-        @foreach (var malzeme in ViewBag.malzemes)
-            <div class="product__item__text">
-                <h6>@item.Title    </h6>
-                <h5>@item.Price</h5>
-                <h5>@item.StockCount</h5>
-                <h5>@item.Description</h5>
-
-
-                <td align="center">
-                    <a asp-controller="Cart" asp-action="buy" asp-route-id="@malzeme.id">Buy Now</a>
-                </td>
-
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-
+                </div>
             </div>
-    </div>
-</span>
+        </span>
+        <div class="product__item__text">
+            <h6>@item.Id    </h6>
+            <h5>@item.Title</h5>
+            <h5>@item.Price</h5>
+            <h5>@item.StockCount</h5>
+            <h5>@item.Description</h5>
+
+            <td align="center">
+                <a asp-controller="Cart" asp-action="buy" asp-route-id="@item.Id">Buy Now</a>
+            </td>
+
+
+            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+        </div>
+        
+
 
     }
 

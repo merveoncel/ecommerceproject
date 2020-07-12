@@ -3,7 +3,7 @@
     ViewData["Title"] = "Contact";
 }
 
-<h1>Contacts</h1>
+<h2>Contacts</h2>
 
 <html lang="zxx">
 <head>
@@ -86,7 +86,7 @@
                         <li><a href="./shop-grid.html" role="menuitem">Shop</a></li>
                         <li class="slicknav_collapsed slicknav_parent">
                             <a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
-                                <a href="#">Pages</a>
+                                
                                 <span class="slicknav_arrow">►</span>
                             </a><ul class="header__menu__dropdown slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
                                 <li><a href="./shop-details.html" role="menuitem" tabindex="-1">Shop Details</a></li>
@@ -144,14 +144,14 @@
                     <div class="contact__widget">
                         <span class="icon_phone"></span>
                         <h4>Phone</h4>
-                        <p>+00000000</p>
+                        <p>(212)2330205</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
                         <h4>Address</h4>
-                        <p>60-49 Road 11378 İstanbul/Turkey</p>
+                        <p>Rumelihisarı,İstanbul/Turkey</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -165,7 +165,7 @@
                     <div class="contact__widget">
                         <span class="icon_mail_alt"></span>
                         <h4>Email</h4>
-                        <p>hello@animals.com</p>
+                        <p>info@animalfood.com</p>
                     </div>
                 </div>
             </div>
@@ -180,8 +180,9 @@
             <div class="inside-widget">
                 <h4>İstanbul</h4>
                 <ul>
-                    <li>Phone: +12-345-6789</li>
-                    <li>Add: 16 Creek Ave. Farmingdale, NY</li>
+                    <li>Phone: (212) 2330205
+                        </li>
+                    <li>Add:Rumelihisarı, İstanbul</li>
                 </ul>
             </div>
         </div>
@@ -207,12 +208,36 @@
                     </div>
                     <div class="col-lg-12 text-center">
                         <textarea placeholder="Your message"></textarea>
-                        <button type="submit" class="site-btn">SEND MESSAGE</button>
-                    </div>
+
+
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SendMessage">  
+                            
+                        </a>
+                    </div> 
                 </div>
             </form>
         </div>
     </div>
+
+
+    or,
+    
+    <p><strong>CONTACT US</strong></p>
+
+    <p>You can email us at <a href="mailto:info@animalfood.com">info@animalfood.com</a>.&nbsp; </p>
+
+
+
+    
+
+
+
+    <p>
+        You can contact us via email at info@animalfood.com and we will
+        endeavour to get back to as soon as possible.
+    </p>
+
+
     <!-- Contact Form End -->
     <!-- Footer Section Begin -->
     <!-- Footer Section End -->

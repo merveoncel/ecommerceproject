@@ -24,12 +24,13 @@ namespace ecommerceproject.Controllers
         [Route("buy/{id}")]
         public IActionResult Buy(string id)
         {
-            Malzeme productModel = new Malzeme();
+            Malzeme malzeme = new Malzeme();
+            malzeme.Id = int.Parse(id);
             if (SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart") == null)
             {
                 List<Item> cart = new List<Item>();
-                cart.Add(new Item { Malzeme = productModel.find(id), Quantity = 1 });
-                SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+                cart.Add(new Item { Malzeme = malzeme, Quantity = 1 });
+               SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             }
             else
             {
@@ -41,7 +42,7 @@ namespace ecommerceproject.Controllers
                 }
                 else
                 {
-                    cart.Add(new Item { Malzeme = productModel.find(id), Quantity = 1 });
+                 cart.Add(new Item { Malzeme = malzeme, Quantity = 1 });
                 }
                 SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             }

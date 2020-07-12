@@ -7,7 +7,7 @@ namespace ecommerceproject.Models
 {
     public class Malzeme
     {
-        internal int MalzemeId;
+        //internal int MalzemeId;
 
         public int Id { get; set; }
 
@@ -19,7 +19,7 @@ namespace ecommerceproject.Models
 
         public string Description { get; set; }
 
-        public Decimal Price { get; set; }
+        public decimal Price { get; set; }
 
         public int StockCount { get; set; }
 
@@ -35,12 +35,13 @@ namespace ecommerceproject.Models
             //  double result = 4.0 / 2.0; //2.0000000000000000000000001 1.9999999999999999999999998
         }
 
-        internal Malzeme find(string id)
-        {
-            throw new NotImplementedException();
-        }
+     
 
         public virtual List<MalzemeImage> MalzemeImages { get; set; }
 
+        internal dynamic findAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

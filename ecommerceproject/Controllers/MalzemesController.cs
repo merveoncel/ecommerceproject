@@ -28,8 +28,11 @@ namespace ecommerceproject.Controllers
         public async Task<IActionResult> Index()
         {
 
+           
+           
             var applicationDbContext = _context.Malzeme.Include(m => m.Category).Include(m=>m.MalzemeImages);
             return View(await applicationDbContext.ToListAsync());
+           
         }
 
         public async Task<IActionResult> UploadImage(ImageUploadViewModel uploadModel)
@@ -54,10 +57,13 @@ namespace ecommerceproject.Controllers
 
             return RedirectToAction(nameof(ManageImage), new { id = uploadModel.MalzemeId });
 
+            
 
         }
 
-
+        
+            
+       
         public async Task<IActionResult> ManageImage(int? id)
         {
             if (id == null)
@@ -71,8 +77,6 @@ namespace ecommerceproject.Controllers
             {
                 return NotFound();
             }
-            MalzemeImage productModel = new MalzemeImage();
-            ViewBag.malzemes = productModel.findAll();
             return View(malzeme);
         }
 

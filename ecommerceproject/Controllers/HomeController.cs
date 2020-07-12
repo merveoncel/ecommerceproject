@@ -9,6 +9,7 @@ using ecommerceproject.ViewModel;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ecommerceproject.Data;
 using Microsoft.EntityFrameworkCore;
+using AspNetCore;
 
 namespace ecommerceproject.Controllers
 {
@@ -35,6 +36,28 @@ namespace ecommerceproject.Controllers
         {
             return View();
         }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Our()
+        {
+            return View();
+        }
+        public IActionResult Payment()
+        {
+            return View();
+        }
+
+        public IActionResult Paymentapp()
+        {
+            return View();
+        }
+        public IActionResult SendMessage()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

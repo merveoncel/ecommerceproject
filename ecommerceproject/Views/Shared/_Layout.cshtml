@@ -10,14 +10,11 @@
         <meta name="description" content="Ogani Template">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="~/css/site.css">
 
-
         <meta name="keywords" content="Ogani, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 
         <!-- Google Font -->
@@ -92,8 +89,6 @@
                 </div>
             </div>
 
-       
-
             <div id="mobile-menu-wrap">
                 <div class="slicknav_menu">
                     <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><nav class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
@@ -123,7 +118,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="header__top__left">
                                 <ul>
-                                    <li><i class="fa fa-envelope"></i> info@animalfoods.com</li>
+                                    <li><i class="fa fa-envelope"></i> info@animalfood.com</li>
                                     <li>Free Shipping for all Order of $99</li>
                                 </ul>
                             </div>
@@ -137,9 +132,6 @@
                                     <a href="#"><i class="fa fa-pinterest-p"></i></a>
                                 </div>
 
-                               
-
-                               
 
                                 <div class="header__top__right__language">
                                     <img src="~/img/language.png" alt="">
@@ -161,11 +153,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="header__logo">
-                            <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
-                        </div>
-                    </div>
+                   
                     <div class="col-lg-6">
                         <nav class="header__menu">
                             <ul>
@@ -173,10 +161,9 @@
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Malzemes" asp-action="Index">Shop</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
                                 <li><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                                <li><a a class="nav-link text-dark" asp-area="" asp-controller="Comments" asp-action="Index">Comments</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Comments" asp-action="Index">Comments</a></li>
+                                <li><a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="Index">Payment</a></li>
 
-
-                           
                             </ul>
                         </nav>
                     </div>
@@ -196,29 +183,12 @@
             </div>
         </header>
 
-
-
-
-
-
-
         <div class="container">
 
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div>
-
-
-
-
-
-
-
-
-
-
-
 
         <footer class="footer spad">
             <div class="container">
@@ -231,7 +201,7 @@
                             <ul>
                                 <li>Address: Rumelihisarı/Sarıyer/İstanbul</li>
                                 <li>Phone: 0212 432 33 00</li>
-                                <li>Email: info@animalfoods.com</li>
+                                <li>Email: info@animalfood.com</li>
                             </ul>
                         </div>
                     </div>
@@ -239,14 +209,12 @@
                         <div class="footer__widget">
                             <h6>Useful Links</h6>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Secure Shopping</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a asp-controller="Home" asp-action="About" >About Us</a></li>
+                                <li><a asp-controller="Home" asp-action="Privacy" >Privacy Policy</a></li>
                             </ul>
                             <ul>
-                                <li><a href="#">Who We Are</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a asp-controller="Home" asp-action="Our">Our Services</a></li>
+                                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -279,8 +247,6 @@
         <script src="~/js/mixitup.min.js"></script>
         <script src="~/js/owl.carousel.min.js"></script>
         <script src="~/js/main.js"></script>
-
-
 
 
         @RenderSection("Scripts", required: false)
